@@ -30,92 +30,125 @@ import {
   BookOpen,
   Building,
   Star,
-  Mail
+  Mail,
+  Menu,
+  X
 } from "lucide-react";
+import { useState } from "react";
 
 const Index = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white font-inter overflow-x-hidden">
       {/* Navigation */}
       <nav className="border-b border-gray-100 bg-white/95 backdrop-blur-sm fixed w-full z-50 animate-slide-in-bottom">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 animate-fade-in-left">
-              <div className="w-8 h-8 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-lg flex items-center justify-center animate-pulse-glow">
-                <span className="text-white font-bold text-lg">D</span>
+              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-lg flex items-center justify-center animate-pulse-glow">
+                <span className="text-white font-bold text-base sm:text-lg">D</span>
               </div>
-              <span className="text-2xl font-bold text-gray-900">Buck</span>
+              <span className="text-xl sm:text-2xl font-bold text-gray-900">Buck</span>
             </div>
-            <div className="hidden md:flex items-center space-x-8 animate-fade-in">
+            
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8 animate-fade-in">
               <a href="#features" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Features</a>
               <a href="#how-it-works" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">How It Works</a>
               <a href="#about" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">About</a>
               <a href="#founders" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Founders</a>
               <a href="#contact" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Contact</a>
             </div>
-            <Button className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white animate-fade-in-right transform hover:scale-105 transition-all duration-300">
-              Book a Demo
-            </Button>
+
+            {/* Mobile Menu Button */}
+            <div className="flex items-center space-x-3">
+              <Button className="hidden sm:flex bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white animate-fade-in-right transform hover:scale-105 transition-all duration-300">
+                Book a Demo
+              </Button>
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-gray-600 hover:text-dbuck-primary transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="lg:hidden mt-4 pb-4 border-t border-gray-100 animate-fade-in">
+              <div className="flex flex-col space-y-4 pt-4">
+                <a href="#features" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>Features</a>
+                <a href="#how-it-works" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>How It Works</a>
+                <a href="#about" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>About</a>
+                <a href="#founders" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>Founders</a>
+                <a href="#contact" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+                <Button className="sm:hidden bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white w-full mt-2">
+                  Book a Demo
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-gray-50 via-white to-dbuck-light/10 relative overflow-hidden">
+      <section className="pt-20 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 via-white to-dbuck-light/10 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-dbuck-primary/20 to-dbuck-secondary/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-dbuck-secondary/20 to-dbuck-primary/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
+          <div className="absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-40 sm:w-80 h-40 sm:h-80 bg-gradient-to-br from-dbuck-primary/20 to-dbuck-secondary/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-40 sm:w-80 h-40 sm:h-80 bg-gradient-to-tr from-dbuck-secondary/20 to-dbuck-primary/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-left">
-              <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-6 animate-bounce-in">
-                <Sparkles className="w-4 h-4 mr-2" />
-                AI-Powered Accreditation
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left animate-fade-in-left">
+              <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-4 sm:mb-6 animate-bounce-in">
+                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                <span className="text-xs sm:text-sm">AI-Powered Accreditation</span>
               </Badge>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
                 <span className="animate-fade-in-up">Revolutionizing</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-dbuck-primary to-dbuck-secondary animate-gradient-shift animate-delayed-fade-in"> Accreditation</span> 
                 <br />
                 <span className="animate-delayed-fade-in-2">with AI</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed animate-delayed-fade-in-3">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed animate-delayed-fade-in-3 max-w-2xl mx-auto lg:mx-0">
                 DBuck simplifies NAAC, NIRF & NBA with automation, real-time insights & error-free reporting.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-                <Button size="lg" className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-dbuck-primary/25">
-                  <Zap className="mr-2 h-5 w-5" />
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up justify-center lg:justify-start" style={{animationDelay: '0.8s'}}>
+                <Button size="lg" className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-dbuck-primary/25 text-sm sm:text-base">
+                  <Zap className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Book a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-dbuck-primary/30 text-dbuck-primary hover:bg-dbuck-primary/5 transform hover:scale-105 transition-all duration-300">
-                  <Play className="mr-2 h-5 w-5" />
+                <Button size="lg" variant="outline" className="border-dbuck-primary/30 text-dbuck-primary hover:bg-dbuck-primary/5 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base">
+                  <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Watch How It Works
                 </Button>
               </div>
             </div>
-            <div className="animate-fade-in-right">
-              <div className="bg-gradient-to-br from-dbuck-primary/10 via-dbuck-secondary/10 to-gray-100 rounded-3xl p-8 animate-float relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-dbuck-primary/5 to-dbuck-secondary/5 rounded-3xl animate-pulse-glow"></div>
-                <div className="bg-white rounded-2xl p-6 shadow-xl relative z-10 transform hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-gray-900">Accreditation Dashboard</h3>
-                    <Badge className="bg-gradient-to-r from-green-400 to-green-500 text-white animate-pulse">Live</Badge>
+            <div className="animate-fade-in-right mt-8 lg:mt-0">
+              <div className="bg-gradient-to-br from-dbuck-primary/10 via-dbuck-secondary/10 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 animate-float relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-dbuck-primary/5 to-dbuck-secondary/5 rounded-2xl sm:rounded-3xl animate-pulse-glow"></div>
+                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-xl relative z-10 transform hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Accreditation Dashboard</h3>
+                    <Badge className="bg-gradient-to-r from-green-400 to-green-500 text-white animate-pulse text-xs">Live</Badge>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">NAAC Score</span>
-                      <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-dbuck-primary to-dbuck-secondary">3.2/4.0</span>
+                      <span className="text-xs sm:text-sm text-gray-600">NAAC Score</span>
+                      <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-dbuck-primary to-dbuck-secondary text-sm sm:text-base">3.2/4.0</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                      <div className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary h-2 rounded-full animate-slide-in-bottom" style={{width: '80%', animationDelay: '1s'}}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2 overflow-hidden">
+                      <div className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary h-1.5 sm:h-2 rounded-full animate-slide-in-bottom" style={{width: '80%', animationDelay: '1s'}}></div>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Completion</span>
-                      <span className="font-bold text-green-600">95%</span>
+                      <span className="text-xs sm:text-sm text-gray-600">Completion</span>
+                      <span className="font-bold text-green-600 text-sm sm:text-base">95%</span>
                     </div>
                   </div>
                 </div>
@@ -126,15 +159,15 @@ const Index = () => {
       </section>
 
       {/* What We Do Section */}
-      <section id="features" className="py-20 px-6 bg-white">
+      <section id="features" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">What We Do</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive AI-powered solutions for educational accreditation and ranking
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 icon: Brain,
@@ -174,10 +207,10 @@ const Index = () => {
               }
             ].map((feature, index) => (
               <Card key={index} className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-dbuck-primary/10 group animate-fade-in-up transform hover:scale-105" style={{animationDelay: feature.delay}}>
-                <CardContent className="p-6">
-                  <feature.icon className="h-12 w-12 text-dbuck-primary mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:text-dbuck-secondary" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-dbuck-primary transition-colors">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                <CardContent className="p-4 sm:p-6">
+                  <feature.icon className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-dbuck-primary mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:text-dbuck-secondary" />
+                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 group-hover:text-dbuck-primary transition-colors">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -186,13 +219,13 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-dbuck-light/5">
+      <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-dbuck-light/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p className="text-xl text-gray-600">Simple, streamlined process in three steps</p>
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">How It Works</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600">Simple, streamlined process in three steps</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 step: "01",
@@ -214,13 +247,13 @@ const Index = () => {
               }
             ].map((step, index) => (
               <div key={index} className="text-center animate-fade-in-up" style={{animationDelay: step.delay}}>
-                <div className="w-16 h-16 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 animate-bounce-in hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary text-white rounded-full flex items-center justify-center text-lg sm:text-xl lg:text-2xl font-bold mx-auto mb-4 sm:mb-6 animate-bounce-in hover:scale-110 transition-transform duration-300">
                   {step.step}
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4 hover:text-dbuck-primary transition-colors">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4 hover:text-dbuck-primary transition-colors">{step.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600">{step.description}</p>
                 {index < 2 && (
-                  <ArrowRight className="h-6 w-6 text-dbuck-primary mx-auto mt-6 hidden md:block animate-pulse" />
+                  <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 text-dbuck-primary mx-auto mt-4 sm:mt-6 hidden sm:block animate-pulse" />
                 )}
               </div>
             ))}
@@ -229,13 +262,13 @@ const Index = () => {
       </section>
 
       {/* Why DBuck Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why DBuck?</h2>
-            <p className="text-xl text-gray-600">The smart choice for modern educational institutions</p>
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Why DBuck?</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600">The smart choice for modern educational institutions</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 icon: TrendingUp,
@@ -263,9 +296,9 @@ const Index = () => {
               }
             ].map((benefit, index) => (
               <div key={index} className="text-center animate-fade-in-up hover:scale-105 transition-transform duration-300" style={{animationDelay: benefit.delay}}>
-                <benefit.icon className="h-12 w-12 text-dbuck-primary mx-auto mb-4 hover:text-dbuck-secondary transition-colors hover:scale-110 transform duration-300" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 hover:text-dbuck-primary transition-colors">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <benefit.icon className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-dbuck-primary mx-auto mb-3 sm:mb-4 hover:text-dbuck-secondary transition-colors hover:scale-110 transform duration-300" />
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3 hover:text-dbuck-primary transition-colors">{benefit.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -273,31 +306,31 @@ const Index = () => {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-dbuck-light/5">
+      <section id="about" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-dbuck-light/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-6">
-              <Building className="w-4 h-4 mr-2" />
-              About DBuck
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-4 sm:mb-6">
+              <Building className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+              <span className="text-xs sm:text-sm">About DBuck</span>
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Transforming Education
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-dbuck-primary to-dbuck-secondary">Through Innovation</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               We're on a mission to revolutionize how educational institutions approach accreditation, 
               making quality education accessible and measurable across India.
             </p>
           </div>
 
           {/* Mission, Vision, Values */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
             <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-up">
-              <CardContent className="p-8 text-center">
-                <Target className="h-16 w-16 text-dbuck-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                <p className="text-gray-600 leading-relaxed">
+              <CardContent className="p-6 sm:p-8 text-center">
+                <Target className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-dbuck-primary mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Our Mission</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   To democratize access to quality accreditation tools and empower every educational 
                   institution in India to achieve excellence through AI-powered automation and insights.
                 </p>
@@ -305,21 +338,21 @@ const Index = () => {
             </Card>
 
             <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <CardContent className="p-8 text-center">
-                <Eye className="h-16 w-16 text-dbuck-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                <p className="text-gray-600 leading-relaxed">
+              <CardContent className="p-6 sm:p-8 text-center">
+                <Eye className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-dbuck-primary mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Our Vision</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   To be the leading AI platform that transforms educational accreditation globally, 
                   making quality education transparent, accessible, and continuously improving.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <CardContent className="p-8 text-center">
-                <Heart className="h-16 w-16 text-dbuck-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
-                <p className="text-gray-600 leading-relaxed">
+            <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-up sm:col-span-3 lg:col-span-1" style={{animationDelay: '0.2s'}}>
+              <CardContent className="p-6 sm:p-8 text-center">
+                <Heart className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-dbuck-primary mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Our Values</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Innovation, transparency, accessibility, and excellence. We believe every institution 
                   deserves the tools to succeed and every student deserves quality education.
                 </p>
@@ -328,10 +361,10 @@ const Index = () => {
           </div>
 
           {/* Our Story & Stats */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in-left">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h3>
-              <div className="space-y-6 text-gray-600 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Our Story</h3>
+              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-gray-600 leading-relaxed">
                 <p>
                   DBuck was born from a simple observation: educational institutions across India were 
                   struggling with complex, time-consuming accreditation processes that often required 
@@ -350,23 +383,23 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-fade-in-right">
-              <div className="bg-gradient-to-br from-dbuck-primary/10 to-dbuck-secondary/10 rounded-3xl p-8">
-                <div className="grid grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-dbuck-primary/10 to-dbuck-secondary/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-dbuck-primary mb-2">10,000+</div>
-                    <div className="text-gray-600">Institutions Served</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">10,000+</div>
+                    <div className="text-xs sm:text-sm text-gray-600">Institutions Served</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-dbuck-primary mb-2">95%</div>
-                    <div className="text-gray-600">Success Rate</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">95%</div>
+                    <div className="text-xs sm:text-sm text-gray-600">Success Rate</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-dbuck-primary mb-2">80%</div>
-                    <div className="text-gray-600">Time Saved</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">80%</div>
+                    <div className="text-xs sm:text-sm text-gray-600">Time Saved</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-dbuck-primary mb-2">25%</div>
-                    <div className="text-gray-600">Score Improvement</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">25%</div>
+                    <div className="text-xs sm:text-sm text-gray-600">Score Improvement</div>
                   </div>
                 </div>
               </div>
@@ -376,63 +409,63 @@ const Index = () => {
       </section>
 
       {/* Founders Section */}
-      <section id="founders" className="py-20 px-6 bg-white">
+      <section id="founders" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-6">
-              <Users className="w-4 h-4 mr-2" />
-              Meet the Team
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-4 sm:mb-6">
+              <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+              <span className="text-xs sm:text-sm">Meet the Team</span>
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
               The Visionaries Behind
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-dbuck-primary to-dbuck-secondary">DBuck</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Meet the passionate founders who are revolutionizing educational accreditation 
               through innovative AI solutions and deep industry expertise.
             </p>
           </div>
 
           {/* Founders Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16 lg:mb-20">
             {/* Founder 1 */}
             <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-left">
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-full mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-white text-4xl font-bold">JS</span>
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-full mb-4 sm:mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">JS</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">John Smith</h3>
-                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4">Co-Founder & CEO</Badge>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">John Smith</h3>
+                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4 text-xs sm:text-sm">Co-Founder & CEO</Badge>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                     Former Director of Educational Technology at leading Indian universities. 
                     15+ years of experience in educational administration and technology implementation. 
                     Passionate about making quality education accessible to all.
                   </p>
-                  <div className="space-y-3 w-full mb-6">
+                  <div className="space-y-2 sm:space-y-3 w-full mb-4 sm:mb-6">
                     <div className="flex items-center justify-center space-x-2">
-                      <BookOpen className="h-4 w-4 text-dbuck-primary" />
-                      <span className="text-sm text-gray-600">PhD in Educational Technology, IIT Delhi</span>
+                      <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">PhD in Educational Technology, IIT Delhi</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
-                      <Award className="h-4 w-4 text-dbuck-primary" />
-                      <span className="text-sm text-gray-600">Former VP of Technology, ABC University</span>
+                      <Award className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">Former VP of Technology, ABC University</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
-                      <Building className="h-4 w-4 text-dbuck-primary" />
-                      <span className="text-sm text-gray-600">Ex-Consultant, National Education Board</span>
+                      <Building className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">Ex-Consultant, National Education Board</span>
                     </div>
                   </div>
                   <div className="flex space-x-4">
                     <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Linkedin className="h-5 w-5" />
+                      <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                     <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Twitter className="h-5 w-5" />
+                      <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                     <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Mail className="h-5 w-5" />
+                      <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                   </div>
                 </div>
@@ -441,41 +474,41 @@ const Index = () => {
 
             {/* Founder 2 */}
             <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-right">
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-dbuck-secondary to-dbuck-primary rounded-full mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-white text-4xl font-bold">AP</span>
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-dbuck-secondary to-dbuck-primary rounded-full mb-4 sm:mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">AP</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Aisha Patel</h3>
-                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4">Co-Founder & CTO</Badge>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Aisha Patel</h3>
+                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4 text-xs sm:text-sm">Co-Founder & CTO</Badge>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                     AI/ML expert with 12+ years in building scalable technology solutions. 
                     Former Senior AI Engineer at Google and Microsoft. Specializes in natural language 
                     processing and educational data analytics.
                   </p>
-                  <div className="space-y-3 w-full mb-6">
+                  <div className="space-y-2 sm:space-y-3 w-full mb-4 sm:mb-6">
                     <div className="flex items-center justify-center space-x-2">
-                      <Brain className="h-4 w-4 text-dbuck-primary" />
-                      <span className="text-sm text-gray-600">MS in AI/ML, Stanford University</span>
+                      <Brain className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">MS in AI/ML, Stanford University</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
-                      <Award className="h-4 w-4 text-dbuck-primary" />
-                      <span className="text-sm text-gray-600">Former Senior AI Engineer, Google</span>
+                      <Award className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">Former Senior AI Engineer, Google</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
-                      <Star className="h-4 w-4 text-dbuck-primary" />
-                      <span className="text-sm text-gray-600">Published 20+ AI Research Papers</span>
+                      <Star className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">Published 20+ AI Research Papers</span>
                     </div>
                   </div>
                   <div className="flex space-x-4">
                     <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Linkedin className="h-5 w-5" />
+                      <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                     <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Twitter className="h-5 w-5" />
+                      <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                     <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Mail className="h-5 w-5" />
+                      <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                   </div>
                 </div>
@@ -484,27 +517,27 @@ const Index = () => {
           </div>
 
           {/* Founding Story */}
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Founding Story</h3>
-            <p className="text-lg text-gray-600 mb-8">How two passionate educators came together to solve a critical problem</p>
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Our Founding Story</h3>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">How two passionate educators came together to solve a critical problem</p>
           </div>
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg animate-scale-in border border-gray-100">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg animate-scale-in border border-gray-100">
             <div className="prose prose-lg max-w-none text-gray-600">
-              <p className="text-xl leading-relaxed mb-6">
+              <p className="text-lg sm:text-xl leading-relaxed mb-4 sm:mb-6">
                 The idea for DBuck was born during a chance meeting at an education technology conference in Bangalore. 
                 John, frustrated by the manual and error-prone accreditation processes he witnessed as a university administrator, 
                 met Aisha, who had been exploring applications of AI in educational assessment.
               </p>
-              <p className="leading-relaxed mb-6">
+              <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                 "We realized that thousands of institutions across India were struggling with the same challenges," 
                 recalls John. "The accreditation process was not just time-consuming and expensive, but it was also 
                 preventing many deserving institutions from achieving the recognition they deserved."
               </p>
-              <p className="leading-relaxed mb-6">
+              <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                 Aisha adds, "The technology existed to solve these problems. What was missing was a solution specifically 
                 designed for the Indian education system, with deep understanding of local requirements and challenges."
               </p>
-              <p className="leading-relaxed">
+              <p className="text-sm sm:text-base leading-relaxed">
                 Today, DBuck serves over 10,000 institutions across India, helping them save time, reduce costs, 
                 and achieve better accreditation outcomes. But for John and Aisha, the real satisfaction comes from 
                 knowing that they're helping improve the quality of education for millions of students.
@@ -515,23 +548,23 @@ const Index = () => {
       </section>
 
       {/* Social Impact Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-dbuck-primary to-dbuck-secondary text-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-dbuck-primary to-dbuck-secondary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-dbuck-primary/90 to-dbuck-secondary/90 animate-gradient-shift"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold mb-4">Social Impact</h2>
-            <p className="text-xl opacity-90">Making quality education accessible across India</p>
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Social Impact</h2>
+            <p className="text-base sm:text-lg lg:text-xl opacity-90">Making quality education accessible across India</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 text-center">
             {[
               { icon: Users, number: "10,000+", label: "Colleges Underserved", delay: "0s" },
               { icon: DollarSign, number: "$1.17B", label: "Addressable Market", delay: "0.2s" },
               { icon: Award, number: "#1", label: "Accreditation Automation Tool", delay: "0.4s" }
             ].map((stat, index) => (
               <div key={index} className="animate-fade-in-up hover:scale-105 transition-transform duration-300" style={{animationDelay: stat.delay}}>
-                <stat.icon className="h-16 w-16 mx-auto mb-4 opacity-90 hover:opacity-100 transition-opacity" />
-                <div className="text-4xl font-bold mb-2 animate-bounce-in">{stat.number}</div>
-                <p className="text-lg opacity-90">{stat.label}</p>
+                <stat.icon className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 mx-auto mb-3 sm:mb-4 opacity-90 hover:opacity-100 transition-opacity" />
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2 animate-bounce-in">{stat.number}</div>
+                <p className="text-sm sm:text-base lg:text-lg opacity-90">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -539,16 +572,16 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-dbuck-light/5">
+      <section id="contact" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-dbuck-light/5">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get Started Today</h2>
-            <p className="text-xl text-gray-600">Ready to transform your accreditation process? Let's talk.</p>
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Get Started Today</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600">Ready to transform your accreditation process? Let's talk.</p>
           </div>
           <Card className="border-gray-200 shadow-lg animate-scale-in hover:shadow-xl hover:shadow-dbuck-primary/10 transition-all duration-300">
-            <CardContent className="p-8">
-              <form id="contact-form" className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+            <CardContent className="p-6 sm:p-8">
+              <form id="contact-form" className="space-y-4 sm:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="animate-fade-in-left">
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Name
@@ -569,14 +602,14 @@ const Index = () => {
                   <Textarea 
                     id="message" 
                     placeholder="Tell us about your institution and accreditation needs..."
-                    rows={5}
+                    rows={4}
                     className="border-gray-300 focus:border-dbuck-primary focus:ring-dbuck-primary/20"
                   />
                 </div>
                 <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white animate-fade-in-up transform hover:scale-105 transition-all duration-300" style={{animationDelay: '0.4s'}}>
-                  <Target className="mr-2 h-5 w-5" />
+                  <Target className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Send Message
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </form>
             </CardContent>
@@ -585,19 +618,19 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-gray-900 text-white">
+      <footer className="py-8 sm:py-10 lg:py-12 px-4 sm:px-6 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between mb-8 animate-fade-in-up">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-lg flex items-center justify-center animate-pulse-glow">
-                <span className="text-white font-bold text-lg">D</span>
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8 animate-fade-in-up">
+            <div className="flex items-center space-x-2 mb-4 sm:mb-0">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-lg flex items-center justify-center animate-pulse-glow">
+                <span className="text-white font-bold text-base sm:text-lg">D</span>
               </div>
-              <span className="text-2xl font-bold">Buck</span>
+              <span className="text-xl sm:text-2xl font-bold">Buck</span>
             </div>
-            <p className="text-gray-400 text-center md:text-left">
+            <p className="text-gray-400 text-center sm:text-left text-sm sm:text-base">
               Revolutionizing Accreditation with AI
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-4 sm:mt-0">
               {[
                 { icon: Twitter, href: "https://twitter.com/dbuckHQ" },
                 { icon: Linkedin, href: "https://linkedin.com/company/dbuck" },
@@ -610,13 +643,13 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-dbuck-light transition-all duration-300 hover:scale-110 transform"
                 >
-                  <social.icon className="h-6 w-6" />
+                  <social.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </a>
               ))}
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <p className="text-gray-400">Made with ❤️ in India</p>
+          <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <p className="text-gray-400 text-sm sm:text-base">Made with ❤️ in India</p>
           </div>
         </div>
       </footer>
