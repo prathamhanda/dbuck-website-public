@@ -22,7 +22,15 @@ import {
   Instagram,
   Sparkles,
   Zap,
-  Target
+  Target,
+  Eye,
+  Heart,
+  Globe,
+  Lightbulb,
+  BookOpen,
+  Building,
+  Star,
+  Mail
 } from "lucide-react";
 
 const Index = () => {
@@ -41,10 +49,9 @@ const Index = () => {
             <div className="hidden md:flex items-center space-x-8 animate-fade-in">
               <a href="#features" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Features</a>
               <a href="#how-it-works" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">How It Works</a>
-              <a href="#impact" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Impact</a>
+              <a href="#about" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">About</a>
+              <a href="#founders" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Founders</a>
               <a href="#contact" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Contact</a>
-              <a href="/about" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">About Us</a>
-              <a href="/founders" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Founders</a>
             </div>
             <Button className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white animate-fade-in-right transform hover:scale-105 transition-all duration-300">
               Book a Demo
@@ -265,8 +272,250 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-dbuck-light/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-6">
+              <Building className="w-4 h-4 mr-2" />
+              About DBuck
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Transforming Education
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-dbuck-primary to-dbuck-secondary">Through Innovation</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We're on a mission to revolutionize how educational institutions approach accreditation, 
+              making quality education accessible and measurable across India.
+            </p>
+          </div>
+
+          {/* Mission, Vision, Values */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-up">
+              <CardContent className="p-8 text-center">
+                <Target className="h-16 w-16 text-dbuck-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To democratize access to quality accreditation tools and empower every educational 
+                  institution in India to achieve excellence through AI-powered automation and insights.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <CardContent className="p-8 text-center">
+                <Eye className="h-16 w-16 text-dbuck-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To be the leading AI platform that transforms educational accreditation globally, 
+                  making quality education transparent, accessible, and continuously improving.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <CardContent className="p-8 text-center">
+                <Heart className="h-16 w-16 text-dbuck-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Innovation, transparency, accessibility, and excellence. We believe every institution 
+                  deserves the tools to succeed and every student deserves quality education.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Our Story & Stats */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in-left">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h3>
+              <div className="space-y-6 text-gray-600 leading-relaxed">
+                <p>
+                  DBuck was born from a simple observation: educational institutions across India were 
+                  struggling with complex, time-consuming accreditation processes that often required 
+                  expensive consultants and months of preparation.
+                </p>
+                <p>
+                  Founded by a team of education technology experts and AI researchers, we recognized 
+                  the potential of artificial intelligence to streamline these processes while 
+                  maintaining the highest standards of quality and compliance.
+                </p>
+                <p>
+                  Today, we're proud to serve institutions across India, helping them save time, 
+                  reduce costs, and achieve better accreditation outcomes through our innovative 
+                  AI-powered platform.
+                </p>
+              </div>
+            </div>
+            <div className="animate-fade-in-right">
+              <div className="bg-gradient-to-br from-dbuck-primary/10 to-dbuck-secondary/10 rounded-3xl p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-dbuck-primary mb-2">10,000+</div>
+                    <div className="text-gray-600">Institutions Served</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-dbuck-primary mb-2">95%</div>
+                    <div className="text-gray-600">Success Rate</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-dbuck-primary mb-2">80%</div>
+                    <div className="text-gray-600">Time Saved</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-dbuck-primary mb-2">25%</div>
+                    <div className="text-gray-600">Score Improvement</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founders Section */}
+      <section id="founders" className="py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-6">
+              <Users className="w-4 h-4 mr-2" />
+              Meet the Team
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              The Visionaries Behind
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-dbuck-primary to-dbuck-secondary">DBuck</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Meet the passionate founders who are revolutionizing educational accreditation 
+              through innovative AI solutions and deep industry expertise.
+            </p>
+          </div>
+
+          {/* Founders Grid */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-20">
+            {/* Founder 1 */}
+            <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-left">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-32 h-32 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-full mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <span className="text-white text-4xl font-bold">JS</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">John Smith</h3>
+                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4">Co-Founder & CEO</Badge>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Former Director of Educational Technology at leading Indian universities. 
+                    15+ years of experience in educational administration and technology implementation. 
+                    Passionate about making quality education accessible to all.
+                  </p>
+                  <div className="space-y-3 w-full mb-6">
+                    <div className="flex items-center justify-center space-x-2">
+                      <BookOpen className="h-4 w-4 text-dbuck-primary" />
+                      <span className="text-sm text-gray-600">PhD in Educational Technology, IIT Delhi</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-2">
+                      <Award className="h-4 w-4 text-dbuck-primary" />
+                      <span className="text-sm text-gray-600">Former VP of Technology, ABC University</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-2">
+                      <Building className="h-4 w-4 text-dbuck-primary" />
+                      <span className="text-sm text-gray-600">Ex-Consultant, National Education Board</span>
+                    </div>
+                  </div>
+                  <div className="flex space-x-4">
+                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                      <Twitter className="h-5 w-5" />
+                    </a>
+                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                      <Mail className="h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Founder 2 */}
+            <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-right">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-32 h-32 bg-gradient-to-br from-dbuck-secondary to-dbuck-primary rounded-full mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <span className="text-white text-4xl font-bold">AP</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Aisha Patel</h3>
+                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4">Co-Founder & CTO</Badge>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    AI/ML expert with 12+ years in building scalable technology solutions. 
+                    Former Senior AI Engineer at Google and Microsoft. Specializes in natural language 
+                    processing and educational data analytics.
+                  </p>
+                  <div className="space-y-3 w-full mb-6">
+                    <div className="flex items-center justify-center space-x-2">
+                      <Brain className="h-4 w-4 text-dbuck-primary" />
+                      <span className="text-sm text-gray-600">MS in AI/ML, Stanford University</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-2">
+                      <Award className="h-4 w-4 text-dbuck-primary" />
+                      <span className="text-sm text-gray-600">Former Senior AI Engineer, Google</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-2">
+                      <Star className="h-4 w-4 text-dbuck-primary" />
+                      <span className="text-sm text-gray-600">Published 20+ AI Research Papers</span>
+                    </div>
+                  </div>
+                  <div className="flex space-x-4">
+                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                      <Twitter className="h-5 w-5" />
+                    </a>
+                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                      <Mail className="h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Founding Story */}
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Founding Story</h3>
+            <p className="text-lg text-gray-600 mb-8">How two passionate educators came together to solve a critical problem</p>
+          </div>
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg animate-scale-in border border-gray-100">
+            <div className="prose prose-lg max-w-none text-gray-600">
+              <p className="text-xl leading-relaxed mb-6">
+                The idea for DBuck was born during a chance meeting at an education technology conference in Bangalore. 
+                John, frustrated by the manual and error-prone accreditation processes he witnessed as a university administrator, 
+                met Aisha, who had been exploring applications of AI in educational assessment.
+              </p>
+              <p className="leading-relaxed mb-6">
+                "We realized that thousands of institutions across India were struggling with the same challenges," 
+                recalls John. "The accreditation process was not just time-consuming and expensive, but it was also 
+                preventing many deserving institutions from achieving the recognition they deserved."
+              </p>
+              <p className="leading-relaxed mb-6">
+                Aisha adds, "The technology existed to solve these problems. What was missing was a solution specifically 
+                designed for the Indian education system, with deep understanding of local requirements and challenges."
+              </p>
+              <p className="leading-relaxed">
+                Today, DBuck serves over 10,000 institutions across India, helping them save time, reduce costs, 
+                and achieve better accreditation outcomes. But for John and Aisha, the real satisfaction comes from 
+                knowing that they're helping improve the quality of education for millions of students.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Social Impact Section */}
-      <section id="impact" className="py-20 px-6 bg-gradient-to-r from-dbuck-primary to-dbuck-secondary text-white relative overflow-hidden">
+      <section className="py-20 px-6 bg-gradient-to-r from-dbuck-primary to-dbuck-secondary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-dbuck-primary/90 to-dbuck-secondary/90 animate-gradient-shift"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
