@@ -43,6 +43,8 @@ const Index = () => {
               <a href="#how-it-works" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">How It Works</a>
               <a href="#impact" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Impact</a>
               <a href="#contact" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Contact</a>
+              <a href="/about" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">About Us</a>
+              <a href="/founders" className="text-gray-600 hover:text-dbuck-primary transition-all duration-300 hover:scale-105">Founders</a>
             </div>
             <Button className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white animate-fade-in-right transform hover:scale-105 transition-all duration-300">
               Book a Demo
