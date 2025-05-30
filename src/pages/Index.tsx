@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -47,9 +46,9 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 animate-fade-in-left">
               <img 
-                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=32&h=32&fit=crop&crop=center" 
+                src="/lovable-uploads/17519bb8-3f16-4e9b-a142-0f986e803701.png" 
                 alt="DBuck Logo" 
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg animate-pulse-glow"
+                className="w-7 h-7 sm:w-8 sm:h-8 object-contain"
               />
               <span className="text-xl sm:text-2xl font-bold text-gray-900">Buck</span>
             </div>
@@ -625,9 +624,9 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8 animate-fade-in-up">
             <div className="flex items-center space-x-2 mb-4 sm:mb-0">
               <img 
-                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=32&h=32&fit=crop&crop=center" 
+                src="/lovable-uploads/17519bb8-3f16-4e9b-a142-0f986e803701.png" 
                 alt="DBuck Logo" 
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg animate-pulse-glow"
+                className="w-7 h-7 sm:w-8 sm:h-8 object-contain"
               />
               <span className="text-xl sm:text-2xl font-bold">Buck</span>
             </div>
