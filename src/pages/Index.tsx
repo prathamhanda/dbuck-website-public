@@ -361,48 +361,32 @@ const Index = () => {
             </Card>
           </div>
 
-          {/* Our Story & Stats */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Our Story */}
+          <div className="grid lg:grid-cols-1 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in-left">
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Our Story</h3>
-              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-gray-600 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">Our Story</h3>
+              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-gray-600 leading-relaxed max-w-4xl mx-auto">
                 <p>
-                  DBuck was born from a simple observation: educational institutions across India were 
-                  struggling with complex, time-consuming accreditation processes that often required 
-                  expensive consultants and months of preparation.
+                  DBuck was born from our personal struggle as students navigating the complex world of educational 
+                  accreditation. As undergraduate students, we witnessed firsthand how our own institution struggled 
+                  with manual, time-consuming accreditation processes that seemed outdated and inefficient.
                 </p>
                 <p>
-                  Founded by a team of education technology experts and AI researchers, we recognized 
-                  the potential of artificial intelligence to streamline these processes while 
-                  maintaining the highest standards of quality and compliance.
+                  "We saw our professors and administrative staff spending countless hours on paperwork and data 
+                  compilation that could easily be automated," recalls one of our founders. "Meanwhile, students 
+                  like us were left wondering why such important processes seemed so chaotic and stressful for everyone involved."
                 </p>
                 <p>
-                  Today, we're proud to serve institutions across India, helping them save time, 
-                  reduce costs, and achieve better accreditation outcomes through our innovative 
-                  AI-powered platform.
+                  As computer science students with a passion for solving real-world problems, we realized that 
+                  the technology existed to streamline these challenges. What was missing was a solution designed 
+                  by people who truly understood the student and institutional perspective - those who had lived 
+                  through the accreditation chaos themselves.
                 </p>
-              </div>
-            </div>
-            <div className="animate-fade-in-right">
-              <div className="bg-gradient-to-br from-dbuck-primary/10 to-dbuck-secondary/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8">
-                <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">10,000+</div>
-                    <div className="text-xs sm:text-sm text-gray-600">Institutions Served</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">95%</div>
-                    <div className="text-xs sm:text-sm text-gray-600">Success Rate</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">80%</div>
-                    <div className="text-xs sm:text-sm text-gray-600">Time Saved</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-dbuck-primary mb-1 sm:mb-2">25%</div>
-                    <div className="text-xs sm:text-sm text-gray-600">Score Improvement</div>
-                  </div>
-                </div>
+                <p>
+                  Today, we're proud to be building a solution that addresses the very problems we experienced as 
+                  students, helping institutions save time, reduce costs, and achieve better accreditation outcomes 
+                  while allowing educators to focus on what truly matters - teaching and nurturing students.
+                </p>
               </div>
             </div>
           </div>
