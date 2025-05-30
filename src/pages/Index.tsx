@@ -46,9 +46,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 animate-fade-in-left">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-lg flex items-center justify-center animate-pulse-glow">
-                <span className="text-white font-bold text-base sm:text-lg">D</span>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=32&h=32&fit=crop&crop=center" 
+                alt="DBuck Logo" 
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg animate-pulse-glow"
+              />
               <span className="text-xl sm:text-2xl font-bold text-gray-900">Buck</span>
             </div>
             
@@ -622,9 +624,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8 animate-fade-in-up">
             <div className="flex items-center space-x-2 mb-4 sm:mb-0">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-lg flex items-center justify-center animate-pulse-glow">
-                <span className="text-white font-bold text-base sm:text-lg">D</span>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=32&h=32&fit=crop&crop=center" 
+                alt="DBuck Logo" 
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg animate-pulse-glow"
+              />
               <span className="text-xl sm:text-2xl font-bold">Buck</span>
             </div>
             <p className="text-gray-400 text-center sm:text-left text-sm sm:text-base">
@@ -632,8 +636,8 @@ const Index = () => {
             </p>
             <div className="flex space-x-4 mt-4 sm:mt-0">
               {[
-                { icon: Twitter, href: "https://twitter.com/dbuckHQ" },
-                { icon: Linkedin, href: "https://linkedin.com/company/dbuck" },
+                { icon: Twitter, href: "https://twitter.com/dbuck_in" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/dbuck/" },
                 { icon: Instagram, href: "https://instagram.com/dbuck.in" }
               ].map((social, index) => (
                 <a 
