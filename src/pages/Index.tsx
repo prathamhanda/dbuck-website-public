@@ -360,36 +360,6 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
-
-          {/* Our Story */}
-          <div className="grid lg:grid-cols-1 gap-8 lg:gap-12 items-center">
-            <div className="animate-fade-in-left">
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">Our Story</h3>
-              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                <p>
-                  DBuck was born from our personal struggle as students navigating the complex world of educational 
-                  accreditation. As undergraduate students, we witnessed firsthand how our own institution struggled 
-                  with manual, time-consuming accreditation processes that seemed outdated and inefficient.
-                </p>
-                <p>
-                  "We saw our professors and administrative staff spending countless hours on paperwork and data 
-                  compilation that could easily be automated," recalls one of our founders. "Meanwhile, students 
-                  like us were left wondering why such important processes seemed so chaotic and stressful for everyone involved."
-                </p>
-                <p>
-                  As computer science students with a passion for solving real-world problems, we realized that 
-                  the technology existed to streamline these challenges. What was missing was a solution designed 
-                  by people who truly understood the student and institutional perspective - those who had lived 
-                  through the accreditation chaos themselves.
-                </p>
-                <p>
-                  Today, we're proud to be building a solution that addresses the very problems we experienced as 
-                  students, helping institutions save time, reduce costs, and achieve better accreditation outcomes 
-                  while allowing educators to focus on what truly matters - teaching and nurturing students.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
