@@ -369,7 +369,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
             <Badge className="bg-gradient-to-r from-dbuck-primary/10 to-dbuck-secondary/10 text-dbuck-primary border-dbuck-primary/20 mb-4 sm:mb-6">
-              <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+              <Users className="w-3 h-3 sm:w-4 sm:w-4 mr-1 sm:mr-2" />
               <span className="text-xs sm:text-sm">Meet the Team</span>
             </Badge>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
@@ -437,7 +437,7 @@ const Index = () => {
                     <img 
                       src="/lovable-uploads/a70748cc-0f04-40a3-9b66-883c10bd7467.png" 
                       alt="Shubh Gupta" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Shubh Gupta</h3>
@@ -477,28 +477,35 @@ const Index = () => {
           {/* Founding Story */}
           <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Our Founding Story</h3>
-            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">How two passionate entrepreneurs came together to solve a critical problem</p>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">How a late-night conversation between two students sparked a revolutionary idea</p>
           </div>
           <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg animate-scale-in border border-gray-100">
             <div className="prose prose-lg max-w-none text-gray-600">
               <p className="text-lg sm:text-xl leading-relaxed mb-4 sm:mb-6">
-                The idea for DBuck was born during a chance meeting at an education technology conference in Bangalore. 
-                Shubh, frustrated by the manual and error-prone accreditation processes he witnessed as a student entrepreneur, 
-                met Manan, who had been exploring applications of AI in educational assessment.
+                It was 2 AM on a Tuesday night when everything changed. Shubh was stressing over his college's 
+                upcoming NAAC accreditation process, frustrated by the mountains of paperwork and manual data entry 
+                that seemed to consume weeks of everyone's time. Meanwhile, Manan was deep into exploring AI applications 
+                in education for his final year project.
               </p>
               <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
-                "We realized that thousands of institutions across India were struggling with the same challenges," 
-                recalls Shubh. "The accreditation process was not just time-consuming and expensive, but it was also 
-                preventing many deserving institutions from achieving the recognition they deserved."
+                "I remember calling Manan at 2 AM, completely overwhelmed by how broken the accreditation system was," 
+                recalls Shubh. "Our college was spending lakhs on consultants, faculty were working overtime on manual reports, 
+                and we were still not confident about our submission quality."
               </p>
               <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
-                Manan adds, "The technology existed to solve these problems. What was missing was a solution specifically 
-                designed for the Indian education system, with deep understanding of local requirements and challenges."
+                Manan had been working on machine learning models that could analyze educational data. "When Shubh called me 
+                that night, describing the exact problems institutions face, it was like a lightbulb moment. We realized we 
+                could solve this massive pain point that affects thousands of colleges across India."
+              </p>
+              <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
+                That conversation stretched until 5 AM, and by morning, they had sketched out the first version of what 
+                would become DBuck. "We understood the problem from the inside out - as students, we saw how much time 
+                and resources were being wasted on manual processes that technology could easily automate."
               </p>
               <p className="text-sm sm:text-base leading-relaxed">
-                Today, DBuck serves over 10,000 institutions across India, helping them save time, reduce costs, 
-                and achieve better accreditation outcomes. But for Shubh and Manan, the real satisfaction comes from 
-                knowing that they're helping improve the quality of education for millions of students.
+                Today, DBuck serves institutions across India, but the founders still remember that pivotal 2 AM conversation 
+                that started it all. "Every feature we build, every problem we solve, it all traces back to that night when 
+                we realized we could actually make a difference," says Shubh.
               </p>
             </div>
           </div>
