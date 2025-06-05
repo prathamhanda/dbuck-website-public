@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -384,42 +385,43 @@ const Index = () => {
 
           {/* Founders Grid */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16 lg:mb-20">
-            {/* Founder 1 */}
+            {/* Founder 1 - CTO */}
             <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-left">
               <CardContent className="p-6 sm:p-8">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-dbuck-primary to-dbuck-secondary rounded-full mb-4 sm:mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">JS</span>
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full mb-4 sm:mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-300 border-4 border-gradient-to-br from-dbuck-primary to-dbuck-secondary">
+                    <img 
+                      src="/lovable-uploads/0458df05-12e8-45b2-bc1f-ce60ac445444.png" 
+                      alt="Manan Khanna" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">John Smith</h3>
-                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4 text-xs sm:text-sm">Co-Founder & CEO</Badge>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Manan Khanna</h3>
+                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4 text-xs sm:text-sm">Co-Founder & CTO</Badge>
                   <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-                    Former Director of Educational Technology at leading Indian universities. 
-                    15+ years of experience in educational administration and technology implementation. 
-                    Passionate about making quality education accessible to all.
+                    Seasoned entrepreneur with expertise in AI and technology development. 
+                    Passionate about leveraging cutting-edge technology to solve real-world educational challenges 
+                    and making quality education accessible through innovation.
                   </p>
                   <div className="space-y-2 sm:space-y-3 w-full mb-4 sm:mb-6">
                     <div className="flex items-center justify-center space-x-2">
-                      <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
-                      <span className="text-xs sm:text-sm text-gray-600">PhD in Educational Technology, IIT Delhi</span>
+                      <Brain className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">Expert in AI/ML Technologies</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
                       <Award className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
-                      <span className="text-xs sm:text-sm text-gray-600">Former VP of Technology, ABC University</span>
+                      <span className="text-xs sm:text-sm text-gray-600">Seasoned Technology Entrepreneur</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
                       <Building className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
-                      <span className="text-xs sm:text-sm text-gray-600">Ex-Consultant, National Education Board</span>
+                      <span className="text-xs sm:text-sm text-gray-600">Educational Technology Innovator</span>
                     </div>
                   </div>
                   <div className="flex space-x-4">
-                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                    <a href="https://www.linkedin.com/in/manan-khanna-323162258/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-dbuck-primary transition-colors">
                       <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                    <a href="mailto:manan@dbuck.in" className="text-gray-400 hover:text-dbuck-primary transition-colors">
                       <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                   </div>
@@ -427,42 +429,43 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Founder 2 */}
+            {/* Founder 2 - CEO */}
             <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-right">
               <CardContent className="p-6 sm:p-8">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-dbuck-secondary to-dbuck-primary rounded-full mb-4 sm:mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">AP</span>
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full mb-4 sm:mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-300 border-4 border-gradient-to-br from-dbuck-secondary to-dbuck-primary">
+                    <img 
+                      src="/lovable-uploads/a70748cc-0f04-40a3-9b66-883c10bd7467.png" 
+                      alt="Shubh Gupta" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Aisha Patel</h3>
-                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4 text-xs sm:text-sm">Co-Founder & CTO</Badge>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Shubh Gupta</h3>
+                  <Badge className="bg-dbuck-primary/10 text-dbuck-primary mb-4 text-xs sm:text-sm">Co-Founder & CEO</Badge>
                   <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-                    AI/ML expert with 12+ years in building scalable technology solutions. 
-                    Former Senior AI Engineer at Google and Microsoft. Specializes in natural language 
-                    processing and educational data analytics.
+                    Student entrepreneur with a vision to transform educational accreditation. 
+                    Combines fresh perspectives with deep understanding of institutional challenges 
+                    to drive innovation in educational technology solutions.
                   </p>
                   <div className="space-y-2 sm:space-y-3 w-full mb-4 sm:mb-6">
                     <div className="flex items-center justify-center space-x-2">
-                      <Brain className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
-                      <span className="text-xs sm:text-sm text-gray-600">MS in AI/ML, Stanford University</span>
+                      <Lightbulb className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">Visionary Student Entrepreneur</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
                       <Award className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
-                      <span className="text-xs sm:text-sm text-gray-600">Former Senior AI Engineer, Google</span>
+                      <span className="text-xs sm:text-sm text-gray-600">Educational Innovation Leader</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
-                      <Star className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
-                      <span className="text-xs sm:text-sm text-gray-600">Published 20+ AI Research Papers</span>
+                      <Target className="h-3 w-3 sm:h-4 sm:w-4 text-dbuck-primary" />
+                      <span className="text-xs sm:text-sm text-gray-600">Strategic Business Development</span>
                     </div>
                   </div>
                   <div className="flex space-x-4">
-                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                    <a href="https://www.linkedin.com/in/shubh-gupta-b525b0259/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-dbuck-primary transition-colors">
                       <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
-                      <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-dbuck-primary transition-colors">
+                    <a href="mailto:shubhgupta@dbuck.in" className="text-gray-400 hover:text-dbuck-primary transition-colors">
                       <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
                     </a>
                   </div>
@@ -474,27 +477,27 @@ const Index = () => {
           {/* Founding Story */}
           <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Our Founding Story</h3>
-            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">How two passionate educators came together to solve a critical problem</p>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">How two passionate entrepreneurs came together to solve a critical problem</p>
           </div>
           <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg animate-scale-in border border-gray-100">
             <div className="prose prose-lg max-w-none text-gray-600">
               <p className="text-lg sm:text-xl leading-relaxed mb-4 sm:mb-6">
                 The idea for DBuck was born during a chance meeting at an education technology conference in Bangalore. 
-                John, frustrated by the manual and error-prone accreditation processes he witnessed as a university administrator, 
-                met Aisha, who had been exploring applications of AI in educational assessment.
+                Shubh, frustrated by the manual and error-prone accreditation processes he witnessed as a student entrepreneur, 
+                met Manan, who had been exploring applications of AI in educational assessment.
               </p>
               <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                 "We realized that thousands of institutions across India were struggling with the same challenges," 
-                recalls John. "The accreditation process was not just time-consuming and expensive, but it was also 
+                recalls Shubh. "The accreditation process was not just time-consuming and expensive, but it was also 
                 preventing many deserving institutions from achieving the recognition they deserved."
               </p>
               <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
-                Aisha adds, "The technology existed to solve these problems. What was missing was a solution specifically 
+                Manan adds, "The technology existed to solve these problems. What was missing was a solution specifically 
                 designed for the Indian education system, with deep understanding of local requirements and challenges."
               </p>
               <p className="text-sm sm:text-base leading-relaxed">
                 Today, DBuck serves over 10,000 institutions across India, helping them save time, reduce costs, 
-                and achieve better accreditation outcomes. But for John and Aisha, the real satisfaction comes from 
+                and achieve better accreditation outcomes. But for Shubh and Manan, the real satisfaction comes from 
                 knowing that they're helping improve the quality of education for millions of students.
               </p>
             </div>
