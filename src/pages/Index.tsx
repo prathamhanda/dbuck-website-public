@@ -6,7 +6,6 @@ import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import WhyDBuckSection from "@/components/landing/WhyDBuckSection";
 import AboutSection from "@/components/landing/AboutSection";
 import FoundersSection from "@/components/landing/FoundersSection";
-import SocialImpactSection from "@/components/landing/SocialImpactSection";
 import ContactSection from "@/components/landing/ContactSection";
 import Footer from "@/components/landing/Footer";
 
@@ -20,7 +19,6 @@ const Index = () => {
       <WhyDBuckSection />
       <AboutSection />
       <FoundersSection />
-      <SocialImpactSection />
       <ContactSection />
       <Footer />
     </div>

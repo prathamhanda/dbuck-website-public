@@ -27,7 +27,7 @@ const FoundersSection = () => {
         </div>
 
         {/* Founders Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16 lg:mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Founder 1 - CTO */}
           <Card className="border-gray-200 hover:border-dbuck-primary/30 transition-all duration-300 hover:shadow-xl group animate-fade-in-left">
             <CardContent className="p-6 sm:p-8">
@@ -115,42 +115,6 @@ const FoundersSection = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Founding Story */}
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in-up">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Our Founding Story</h3>
-          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">How a late-night conversation between two students sparked a revolutionary idea</p>
-        </div>
-        <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg animate-scale-in border border-gray-100">
-          <div className="prose prose-lg max-w-none text-gray-600">
-            <p className="text-lg sm:text-xl leading-relaxed mb-4 sm:mb-6">
-              It was 2 AM on a Tuesday night when everything changed. Shubh was stressing over his college's 
-              upcoming NAAC accreditation process, frustrated by the mountains of paperwork and manual data entry 
-              that seemed to consume weeks of everyone's time. Meanwhile, Manan was deep into exploring AI applications 
-              in education for his final year project.
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
-              "I remember calling Manan at 2 AM, completely overwhelmed by how broken the accreditation system was," 
-              recalls Shubh. "Our college was spending lakhs on consultants, faculty were working overtime on manual reports, 
-              and we were still not confident about our submission quality."
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
-              Manan had been working on machine learning models that could analyze educational data. "When Shubh called me 
-              that night, describing the exact problems institutions face, it was like a lightbulb moment. We realized we 
-              could solve this massive pain point that affects thousands of colleges across India."
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
-              That conversation stretched until 5 AM, and by morning, they had sketched out the first version of what 
-              would become DBuck. "We understood the problem from the inside out - as students, we saw how much time 
-              and resources were being wasted on manual processes that technology could easily automate."
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed">
-              Today, DBuck serves institutions across India, but the founders still remember that pivotal 2 AM conversation 
-              that started it all. "Every feature we build, every problem we solve, it all traces back to that night when 
-              we realized we could actually make a difference," says Shubh.
-            </p>
-          </div>
         </div>
       </div>
     </section>
