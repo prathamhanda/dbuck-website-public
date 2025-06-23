@@ -4,6 +4,15 @@ import { Badge } from "@/components/ui/badge";
 import { Sparkles, Zap, ArrowRight, Play } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
   return (
     <section className="pt-20 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 via-white to-dbuck-light/10 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -30,7 +39,11 @@ const HeroSection = () => {
               DBuck simplifies NAAC, NIRF & NBA with automation, real-time insights & error-free reporting.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up justify-center lg:justify-start" style={{animationDelay: '0.8s'}}>
-              <Button size="lg" className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-dbuck-primary/25 text-sm sm:text-base">
+              <Button 
+                onClick={scrollToContact}
+                size="lg" 
+                className="bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-dbuck-primary/25 text-sm sm:text-base"
+              >
                 <Zap className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Book a Demo
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

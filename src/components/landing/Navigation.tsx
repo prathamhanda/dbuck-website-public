@@ -6,6 +6,18 @@ import { useState } from "react";
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    // Close mobile menu if open
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className="border-b border-gray-100 bg-white/95 backdrop-blur-sm fixed w-full z-50 animate-slide-in-bottom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
@@ -30,7 +42,10 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center space-x-3">
-            <Button className="hidden sm:flex bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white animate-fade-in-right transform hover:scale-105 transition-all duration-300">
+            <Button 
+              onClick={scrollToContact}
+              className="hidden sm:flex bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white animate-fade-in-right transform hover:scale-105 transition-all duration-300"
+            >
               Book a Demo
             </Button>
             <button
@@ -51,7 +66,10 @@ const Navigation = () => {
               <a href="#about" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>About</a>
               <a href="#founders" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>Founders</a>
               <a href="#contact" className="text-gray-600 hover:text-dbuck-primary transition-colors px-2 py-1" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
-              <Button className="sm:hidden bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white w-full mt-2">
+              <Button 
+                onClick={scrollToContact}
+                className="sm:hidden bg-gradient-to-r from-dbuck-primary to-dbuck-secondary hover:from-dbuck-dark hover:to-dbuck-primary text-white w-full mt-2"
+              >
                 Book a Demo
               </Button>
             </div>
