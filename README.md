@@ -33,21 +33,6 @@ To get a local copy up and running, follow these simple steps.
 *   Node.js (v18 or higher)
 *   npm or yarn
 
-### Installation
-
-1.  **Clone the repo**
-    ```sh
-    git clone https://github.com/Shubh-260/dbuck-website.git
-    ```
-2.  **Install NPM packages for the frontend**
-    ```sh
-    npm install
-    ```
-3.  **Install NPM packages for the backend**
-    ```sh
-    cd backend
-    npm install
-    ```
 
 ### Running the Application
 
@@ -81,4 +66,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Project Link: [https://github.com/Shubh-260/dbuck-website](https://github.com/Shubh-260/dbuck-website)
+Project Link: [https://github.com/prathamhanda/dbuck-website](https://github.com/prathamhanda/dbuck-website)
